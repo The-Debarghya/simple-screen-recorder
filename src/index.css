@@ -1,0 +1,82 @@
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+video {
+  width: 544px;
+  height: 306px;
+  background-color: #f0f5f5;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  box-shadow: 2px 5px 10px #e8e8e8;
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+.button {
+  background-color: #4CAF78;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.is-primary{
+  background-color: #008CBA;
+  border-radius: 8px;
+}
+.is-warning{
+  background-color: #f44336;
+  border-radius: 8px;
+}
+.is-info{
+  background-color: #4CAF70;
+  border-radius: 8px;
+}
+.is-text{
+  background-color: #e7e7e7; color: black;
+}
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+#saveProgressBar {
+  display: none;
+}
