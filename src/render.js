@@ -4,11 +4,11 @@ const { writeFile } = require('fs');
 
 const { dialog, Menu } = remote;
 
-// Global state
+
 let mediaRecorder; // MediaRecorder instance to capture footage
 let recordedChunks = [];
 
-// Buttons
+
 const videoElement = document.querySelector('video');
 
 const startBtn = document.getElementById('startBtn');
@@ -70,7 +70,8 @@ async function selectSource(source) {
   [videoTrack] = videostream.getVideoTracks();
   [audioTrack] = audiostream.getAudioTracks();
   var stream = new MediaStream([videoTrack, audioTrack]);
-  // Preview the source in a video element
+
+  // View the source in a video element
   videoElement.srcObject = stream;
   videoElement.play();
   videoElement.muted = true;
@@ -79,11 +80,10 @@ async function selectSource(source) {
   const options = { mimeType: 'video/webm; codecs=vp9' };
   mediaRecorder = new MediaRecorder(stream, options);
 
-  // Register Event Handlers
+  // Setup Event Handlers
   mediaRecorder.ondataavailable = handleDataAvailable;
   mediaRecorder.onstop = handleStop;
 
-  // Updates the UI
 }
 
 // Captures all recorded chunks
