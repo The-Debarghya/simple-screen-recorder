@@ -6,4 +6,10 @@ This project was mostly inspired from the <a href="https://www.youtube.com/watch
 * Install from Source code after cloning/downloading the zip:
 ```bash
 npm install --save-dev
+npm start
 ```
+* Build for your own system with:
+```
+npm run make
+```
+* Then Use the application packed by `electron-forge` under *releases* directory.
